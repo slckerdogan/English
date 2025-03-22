@@ -1,0 +1,43 @@
+.speaking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #635fb3;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: white; 
+  letter-spacing: 5px;
+}
+
+.speaking span {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 0.8s ease-out forwards, blink 1s infinite alternate;
+}
+
+.speaking .space {
+  width: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
